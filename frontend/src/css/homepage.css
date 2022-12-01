@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    width: 40vw;
+    height: fit-content;
+    border: 1px solid rgb(211, 255, 254);
+    border-radius: 5px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 15px 0 15px 15px rgb(0 0 0 / 4%);
+}
+
+.react-tabs__tab-list {
+    border: none;
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.react-tabs__tab{
+    text-align: center;
+    margin-left: 30px;
+}
+.react-tabs__tab--selected{
+    border: none;
+    background-color: #c8ffec;
+    border-radius: 15px;
+}
+.react-tabs__tab-panel {
+    margin: 20px;
+}

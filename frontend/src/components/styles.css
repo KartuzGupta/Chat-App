@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.chakra-text{
+  font-family: 'Poppins', sans-serif;
+}
+.css-1a3b3vb{
+  font-family: 'Poppins', sans-serif;
+
+}
+.css-16prm0j{
+  font-family: 'Poppins', sans-serif;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}

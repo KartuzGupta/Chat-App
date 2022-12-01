@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.App{
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-image: url('./Amongus.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chakra-text{
+  font-family: 'Poppins', sans-serif;
+}
+.css-1a3b3vb{
+  font-family: 'Poppins', sans-serif;
+
+}
+.css-16prm0j{
+  font-family: 'Poppins', sans-serif;
+}
