@@ -14,7 +14,9 @@ A simple chat app that allows users to send messages in real-time. The features 
 **Database:** Mongo DB
   
 Clone the project
-
+```bash
+  https://github.com/KartuzGupta/Chat-App.git
+```
 Go to the project directory
 
 ```bash
