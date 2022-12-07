@@ -48,7 +48,7 @@ Start the Client
 ```
 ## Contribution
 
-For contributing to the project, you can comment on the issues and get them assigned. For any queries or suggestions, you can join the discord server and we can discuss there.
+For contributing to the project, you can comment on the issues and get them assigned. For any queries or suggestions, you can join the discord server and we can discuss there.\n
 Link to discord server - https://discord.gg/QZ3nRdVf
 
 Happy Development :)
