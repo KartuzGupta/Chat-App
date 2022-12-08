@@ -34,6 +34,13 @@ Install dependencies
   npm install
 ```
 
+Add an .env file. Content of the file is as follows:
+```bash
+  PORT = 5000
+  MONGO_URI = mongodb+srv://aatma:F=BILsin0@cluster0.p5fpjrw.mongodb.net/?retryWrites=true&w=majority
+  JWT_SECRET = chat_app
+```
+
 Start the server
 
 ```bash
