@@ -23,6 +23,14 @@ Go to the project directory
   cd '.\Chat-App'
 ```
 
+Add a .env file inside the Chat-App and keep content of the file as:
+
+```bash
+  PORT = 5000
+  MONGO_URI = mongodb+srv://aatma:F=BILsin0@cluster0.p5fpjrw.mongodb.net/?retryWrites=true&w=majority
+  JWT_SECRET = chat_app
+```
+
 Install dependencies
 
 ```bash
@@ -32,13 +40,6 @@ Install dependencies
 ```bash
   cd frontend/
   npm install
-```
-
-Add an .env file. Content of the file is as follows:
-```bash
-  PORT = 5000
-  MONGO_URI = mongodb+srv://aatma:F=BILsin0@cluster0.p5fpjrw.mongodb.net/?retryWrites=true&w=majority
-  JWT_SECRET = chat_app
 ```
 
 Start the server
