@@ -69,7 +69,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div data-testid="login-component" >
       <div className="loginFormBox">
         <label htmlFor="email">Email</label>
         <input type="text" name='email' placeholder='Enter email' id='email' value={email}
