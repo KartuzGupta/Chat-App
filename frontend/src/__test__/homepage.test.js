@@ -49,7 +49,7 @@ test('pass valid email to test email input field', () => {
   });
 
   // Testing Rendring of Password Field
-  test('Testing Email Field',async()=>{
+  test('Testing Password Field',async()=>{
       
     render(<Login/>)
     const renderInputField = screen.getByPlaceholderText('Enter password')
