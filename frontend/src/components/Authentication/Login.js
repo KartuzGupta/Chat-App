@@ -71,16 +71,18 @@ const Login = () => {
   return (
     <div data-testid="login-component" >
       <div className="loginFormBox">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" style={{marginTop:"3vw"}}>Email</label>
         <input type="text" name='email' placeholder='Enter email' id='email' value={email}
-                  onChange={(e) => setEmail(e.target.value)} required />
-        <label htmlFor="password">Password</label>
+                  onChange={(e) => setEmail(e.target.value)} required style={{marginTop:"2vw"}} />
+        <label htmlFor="password" style={{marginTop:"3vw"}}>Password</label>
         <div className='passBox'>
             <input type={show?"text":"password"} name='password' placeholder='Enter password' id='password'  value={password}
-                        onChange={(e) => setPassword(e.target.value)} required />
+                        onChange={(e) => setPassword(e.target.value)} required style={{marginTop:"2vw"}} />
           <button className='showPasswordBtn' onClick={handleClick}>{show?<p>Hide</p>:<p>Show</p>}</button>
         </div>
-        {loading?<Loader/>:<button className='submitBtn' onClick={submitHandler}>Login</button>}  
+        {loading?<Loader/>:<button className='submitBtn' onClick={submitHandler} style={{marginTop:"5vw",borderColor:"black",marginLeft:"2vw",marginBottom:"2vw"}}>Login</button>} 
+        {/* {loading ? <Loader /> :  <button onClick={submitHandler}><span>GO</span> <i class="fa fa-check"></i></button>} */}
+ 
       </div>
     </div>
   )

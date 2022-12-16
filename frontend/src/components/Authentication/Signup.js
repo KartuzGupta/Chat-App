@@ -9,10 +9,10 @@ const Signup = () => {
   const [showConfPass, setShowConfPass] = useState(false)
 
   const handlePassClick = () => {
-      setShowPass(!showPass);
+    setShowPass(!showPass);
   }
   const handleConfPassClick = () => {
-      setShowConfPass(!showConfPass);
+    setShowConfPass(!showConfPass);
   }
   const toast = useToast();
   const history = useHistory();
@@ -98,35 +98,35 @@ const Signup = () => {
     }
   };
 
-  
+
   return (
     <div>
-     
-        <div className="loginFormBox">
-          <label htmlFor="name">Name</label>
-          <input type="text" name='name' placeholder='Enter name' id='name' value={name}
-                  onChange={(e) => setName(e.target.value)} required />
-          <label htmlFor="email">Email</label>
-          <input type="email" name='email' placeholder='Enter email' id='email' value={email}
-                    onChange={(e) => setEmail(e.target.value)} required />
-          
-          <label htmlFor="password">Password</label>
-          <div className='passBox'>
-              <input type={showPass?"text":"password"} name='password' placeholder='Enter password' id='password'  value={password}
-                          onChange={(e) => setPassword(e.target.value)} required />
-              <button className='showPasswordBtn' onClick={handlePassClick}>{showPass?<p>Hide</p>:<p>Show</p>}</button>
-              </div>
-          <label htmlFor="confirmPass">Confirm Password</label>
-          <div className='passBox'>
-              <input type={showConfPass?"text":"password"} name='confirmPass' placeholder='Confirm password' id='confirmPass'  value={confirmpassword}
-                          onChange={(e) => setConfirmpassword(e.target.value)} required />
-              <button className='showPasswordBtn' onClick={handleConfPassClick}>{showConfPass?<p>Hide</p>:<p>Show</p>}</button>
-          </div>
-              {isLoading ? <Loader /> : <button className='submitBtn' onClick={submitHandler}>Sign Up</button>} 
-          
+
+      <div className="loginFormBox">
+        {/* <label htmlFor="name"  ></label> */}
+        <input type="text" name='name' placeholder='Enter name' id='name' value={name}
+          onChange={(e) => setName(e.target.value)} required style={{ marginBottom: "1vw" }} />
+        {/* <label htmlFor="email">Email</label> */}
+        <input type="email" name='email' placeholder='Enter email' id='email' value={email}
+          onChange={(e) => setEmail(e.target.value)} required />
+
+        {/* <label htmlFor="password">Password</label> */}
+        <div className='passBox'>
+          <input type={showPass ? "text" : "password"} name='password' placeholder='Enter password' id='password' value={password}
+            onChange={(e) => setPassword(e.target.value)} required />
+          <button className='showPasswordBtn' onClick={handlePassClick}>{showPass ? <p>Hide</p> : <p>Show</p>}</button>
+        </div>
+        {/* <label htmlFor="confirmPass">Confirm Password</label> */}
+        <div className='passBox'>
+          <input type={showConfPass ? "text" : "password"} name='confirmPass' placeholder='Confirm password' id='confirmPass' value={confirmpassword}
+            onChange={(e) => setConfirmpassword(e.target.value)} required />
+          <button className='showPasswordBtn' onClick={handleConfPassClick} >{showConfPass ? <p>Hide</p> : <p>Show</p>}</button>
+        </div>
+        {isLoading ? <Loader /> : <button onClick={submitHandler} style={{ marginTop: "4vw" }}>Sign Up</button>}
+        {/* {isLoading ? <Loader /> :  <button onClick={submitHandler}><span>GO</span> <i class="fa fa-check"></i></button>} */}
       </div>
-  </div>
-)
+    </div>
+  )
 };
 
 export default Signup;
