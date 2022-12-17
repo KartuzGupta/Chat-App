@@ -2,11 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
-import Loader from '../loader/Loader'
-import '../../css/form.css'
+import Loader from "../loader/Loader";
+import "../../css/form.css";
 
 const Login = () => {
-  console.log("Login")
+  console.log("Login");
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
@@ -68,22 +68,51 @@ const Login = () => {
     }
   };
 
+  const forgetPassword = () => {
+    history.push("/forget-password");
+  };
+
   return (
-    <div data-testid="login-component" >
+    <div data-testid="login-component">
       <div className="loginFormBox">
         <label htmlFor="email">Email</label>
-        <input type="text" name='email' placeholder='Enter email' id='email' value={email}
-                  onChange={(e) => setEmail(e.target.value)} required />
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
         <label htmlFor="password">Password</label>
-        <div className='passBox'>
-            <input type={show?"text":"password"} name='password' placeholder='Enter password' id='password'  value={password}
-                        onChange={(e) => setPassword(e.target.value)} required />
-          <button className='showPasswordBtn' onClick={handleClick}>{show?<p>Hide</p>:<p>Show</p>}</button>
+        <div className="passBox">
+          <input
+            type={show ? "text" : "password"}
+            name="password"
+            placeholder="Enter password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button className="showPasswordBtn" onClick={handleClick}>
+            {show ? <p>Hide</p> : <p>Show</p>}
+          </button>
         </div>
-        {loading?<Loader/>:<button className='submitBtn' onClick={submitHandler}>Login</button>}  
+        {loading ? (
+          <Loader />
+        ) : (
+          <button className="submitBtn" onClick={submitHandler}>
+            Login
+          </button>
+        )}
+        <p className="forget-password-style" onClick={forgetPassword}>
+          Forget Password
+        </p>
       </div>
     </div>
-  )
+  );
 };
 
 export default Login;
