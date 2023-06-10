@@ -1,5 +1,5 @@
 
-# Chat App
+# Chat App | Open Source
 
 ## Description
 
