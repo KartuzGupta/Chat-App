@@ -6,12 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import ChatProvider from "./Context/ChatProvider";
 import { BrowserRouter } from "react-router-dom";
+import { DarkModeProvider } from "./DarkMode";
 
 ReactDOM.render(
   <ChakraProvider>
     <BrowserRouter>
       <ChatProvider>
+        <DarkModeProvider>
         <App />
+        </DarkModeProvider>
       </ChatProvider>
     </BrowserRouter>
   </ChakraProvider>,
