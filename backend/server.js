@@ -72,15 +72,24 @@ io.on("connection", (socket) => {
   socket.on("typing", (room) => socket.in(room).emit("typing"));
   socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
 
-  socket.on("new message", (newMessageRecieved) => {
-    var chat = newMessageRecieved.chat;
+  socket.on("new message", (newMessageReceived) => {
+    const chat = newMessageReceived.chat;
 
     if (!chat.users) return console.log("chat.users not defined");
 
-    chat.users.forEach((user) => {
-      if (user._id == newMessageRecieved.sender._id) return;
+    // Get the current timestamp
+    const timestamp = new Date().toLocaleTimeString();
 
-      socket.in(user._id).emit("message recieved", newMessageRecieved);
+    chat.users.forEach((user) => {
+      if (user._id == newMessageReceived.sender._id) return;
+
+      // Add timestamp to the message
+      const messageWithTimestamp = {
+        ...newMessageReceived,
+        timestamp,
+      };
+
+      socket.in(user._id).emit("message received", messageWithTimestamp);
     });
   });
 
